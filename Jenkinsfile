@@ -19,10 +19,8 @@ pipeline {
                 script{
                     ZZ = load 'MlOps.groovy'
                     ZZ.testfunc("Prod")
-                    
                 }
-            }
-           
+            } 
        }
     }
 }
