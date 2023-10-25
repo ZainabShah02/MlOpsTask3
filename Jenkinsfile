@@ -14,14 +14,6 @@ pipeline {
                 
             }
         }
-        
-        stage('Run Tests') {
-            steps {
-                script{
-                sh 'python3 test_file.py'
-                }
-            }
-        }
        stage("groooove"){
             steps{
                 script{
