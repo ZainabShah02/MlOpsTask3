@@ -10,13 +10,13 @@ pipeline {
         
         stage('Install Requirements') {
             steps {
-                cmd 'pip install -r requirements.txt'
+                powershell 'pip install -r requirements.txt'
             }
         }
         
         stage('Run Tests') {
             steps {
-                cmd 'python test_file.py'
+                powershell 'python test_file.py'
             }
         }
     }
