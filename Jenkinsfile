@@ -21,14 +21,15 @@ pipeline {
                 bat 'python test_file.py'
             }
         }
-        
-        stage('Groovy'){
-            steps {
-                script {
-                    groove = load 'MlOps.groovy'
-                    groove.testfunc('prod')
+       stage("groooove"){
+            steps{
+                script{
+                    ZZ = load 'MlOps.groovy'
+                    ZZ.testfunc("Prod")
+                    
                 }
-            }
-        }
+            }
+           
+       }
     }
 }
