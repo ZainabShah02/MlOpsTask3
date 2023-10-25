@@ -4,19 +4,21 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                  // Check out your code from your GitHub repository
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/faizanaslam786/Mlops_task6.git']]])
+
             }
         }
         
         stage('Install Requirements') {
             steps {
-                powershell 'pip install -r requirements.txt'
+                bat 'pip install -r requirements.txt'
             }
         }
         
         stage('Run Tests') {
             steps {
-                powershell 'python test_file.py'
+                bat 'python test_file.py'
             }
         }
     }
