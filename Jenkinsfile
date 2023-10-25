@@ -21,6 +21,7 @@ pipeline {
                 bat 'python test_file.py'
             }
         }
+        
         stage('Groovy'){
             steps {
                 script {
