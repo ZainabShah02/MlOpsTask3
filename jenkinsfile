@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                   // Check out your code from your GitHub repository
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/faizanaslam786/Mlops_task6.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/ZainabShah02/MlOpsTask3.git']]])
 
             }
         }
