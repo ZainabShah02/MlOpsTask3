@@ -10,11 +10,7 @@ pipeline {
         
         stage('Install Requirements') {
             steps {
-                script{
-                powershell 'python --version'
-                powershell 'pip install --user -r requirements.txt'
-                powershell 'pip install pytest'    
-                }
+               echo 'installing dependencies...'
                 
             }
         }
@@ -22,7 +18,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script{
-                powershell 'python test_file.py'
+                bat 'python test_file.py'
                 }
             }
         }
